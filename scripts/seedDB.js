@@ -8,7 +8,7 @@ mongoose.connect(
     "mongodb://localhost/googleboks"
 );
 
-const bookSeed =
+const googlebooks =
 {
     authors: ["Suzanne Collins"],
     description: "Set in a dark vision of the near future, a terrifying reality TV show is taking place. Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old Katniss Everdeen steps forward to take her younger sister's place in the games, she sees it as a death sentence. But Katniss has been close to death before. For her, survival is second nature.",
@@ -20,7 +20,7 @@ const bookSeed =
 
 db.Book
     .remove({})
-    .then(() => db.Book.collection.insertMany(bookSeed))
+    .then(() => db.Book.collection.insertMany(googlebooks))
     .then(data => {
         console.log(data.result.n + " records inserted!");
         process.exit(0);
