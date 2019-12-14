@@ -1,14 +1,13 @@
 import React from "react";
 
+const Jumbotron = ({ children }) => (
+  <div className="jumbotron jumbotron-fluid">
+    <div 
+      style={{ height: 150, clear: "both", paddingTop: 10, paddingBottom: 20, textAlign: "Center"}}
+      className="container">
+      {children}
+    </div>
+  </div>
+);
 
-function Header() {
-    return (
-        <div className="jumbotron text-center">
-            <div className="container text-light">
-                <h1>Google Books Search</h1>
-            </div>
-        </div>
-    );
-}
-
-export default Header;
+export default Jumbotron;
