@@ -1,32 +1,21 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "./components/NavBar/nav";
-import Jumbotron from "./components/Jumbotron/header";
-import Wrapper from "./components/Wrapper/wrapper";
-
-import NoMatch from "./pages/NoMatch";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/search";
+import Results from "./components/Results/results";
 import Saved from "./pages/saved";
+import NoMatch from "./pages/Match/NoMatch";
 
-
-class App extends Component {
- 
-  render() {
-    return (
-      <Router>
-        <div>
-          <NavBar />
-          <Jumbotron />
-          <Wrapper>
-            <Route exact path="/" component={Search} />
-            <Route exact path="/search" component={Search} />
-            <Route exact path="/saved" component={Saved} />
-            <Route exact path="/noMatch" component={NoMatch} />
-          </Wrapper>
-        </div>
-      </Router>
-    )
-  };
-};
+const App = () => (
+  <Router>
+    <div>
+      <Switch>
+        <Route exact path="/" component={Search} />
+        <Route exact path="/results" component={Results} />
+        <Route exact path="/saved" component={Saved} />
+        <Route component={NoMatch} />
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
