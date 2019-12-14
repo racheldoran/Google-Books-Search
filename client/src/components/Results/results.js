@@ -1,4 +1,4 @@
-import React, { Component } from "./node_modules/React";
+import React, { Component } from "R./node_modules/React";
 import API from "../../utils/API";
 
 class Results extends Component {
