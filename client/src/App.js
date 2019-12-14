@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Jumbotron from "./components/Jumbotron";
-import Wrapper from "./components/Wrapper";
+import NavBar from "./components/NavBar/nav";
+import Jumbotron from "./components/Jumbotron/header";
+import Wrapper from "./components/Wrapper/wrapper";
 
 import NoMatch from "./pages/NoMatch";
 import Search from "./pages/search";
