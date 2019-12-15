@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/search";
 import Results from "./components/Results/results";
 import Saved from "./pages/saved";
-import NoMatch from "./pages/Match/NoMatch";
+import NoMatch from "./pages/No Match/NoMatch";
 
 const App = () => (
   <Router>
